@@ -1,0 +1,25 @@
+{
+  "short_name": "Fast Cook",
+  "name": "Fast Cook Recipes",
+  "icons": [
+    {
+      "src": "/fast-food.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/fast-food.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#5F2E20",
+  "background_color": "#09B44D",
+  "related_applications": [],
+  "prefer_related_applications": true
+}

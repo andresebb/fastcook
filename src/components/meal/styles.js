@@ -7,11 +7,12 @@ export const MealContainer = styled.div`
 
 export const Img = styled.img`
   width: 100%;
-  height: 90px;
+  height: 180px;
   display: flex;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   margin: 0 auto;
+  cursor: pointer;
 `;
 export const Text = styled.p`
   text-align: center;

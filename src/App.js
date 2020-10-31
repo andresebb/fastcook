@@ -1,16 +1,22 @@
+import React from "react";
 import "./App.css";
-import { ListFoodCategories } from "./components/listFoodCategories";
 import { Header } from "./components/header/index";
-import { ListMeal } from "./components/listMeal/index";
 import { GlobalStyle } from "./styles/GlobalStyles";
+import { Home } from "./page/Home";
+import { FoodDetail } from "./page/FoodDetail";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <Header />
-      <ListFoodCategories />
-      <ListMeal />
+      <BrowserRouter>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/FoodDetail/:Detailid" component={FoodDetail} />
+        </Switch>
+      </BrowserRouter>
     </>
   );
 }

@@ -18,6 +18,9 @@ export const GlobalStyle = createGlobalStyle`
           list-style: none;
   }
 
+  a{
+          text-decoration: none;
+  }
   button {
           background: transparent;
           border: 0;

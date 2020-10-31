@@ -1,25 +1,17 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { List } from "./styles";
 import { Meal } from "../meal/index";
 import { FoodContext } from "../../Context";
 export const ListMeal = () => {
-  const { mardito } = useContext(FoodContext);
-  console.log(mardito);
+  const { meals, loading } = useContext(FoodContext);
 
   return (
     <List>
-      <Meal />
-      <Meal />
-      <Meal />
-      <Meal />
-      <Meal />
-      <Meal />
-      <Meal />
-      <Meal />
-      <Meal />
-      <Meal />
-      <Meal />
-      <Meal />
+      {loading ? (
+        <p>Cargando...</p>
+      ) : (
+        meals.map((item) => <Meal key={item.idMeal} {...item} />)
+      )}
     </List>
   );
 };

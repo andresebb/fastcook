@@ -33,7 +33,7 @@ export const ListFoodCategories = () => {
       ) : (
         <Categories>
           {ListCategories.map((item) => (
-            <FoodCategory {...item} />
+            <FoodCategory key={item.idCategory} {...item} />
           ))}
         </Categories>
       )}

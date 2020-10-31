@@ -1,14 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { MealContainer, Img, Text } from "./styles";
-const imagen =
-  "https://www.themealdb.com/images/media/meals/sytuqu1511553755.jpg";
 
-export const Meal = () => {
+export const Meal = (props) => {
+  const { strMeal, strMealThumb, idMeal } = props;
   return (
     <>
       <MealContainer>
-        <Img src={imagen} alt="" />
-        <Text>Beef and Mustard Pie</Text>
+        <Link to={`/FoodDetail/${idMeal}`}>
+          <Img src={strMealThumb} alt="" />
+        </Link>
+        <Text>{strMeal}</Text>
       </MealContainer>
     </>
   );
